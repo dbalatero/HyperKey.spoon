@@ -45,6 +45,13 @@ hyperKey
   :bind('l'):toFunction("Lock screen", hs.caffeinate.startScreensaver)
 ```
 
+### Adding a hyper key to OS X
+
+If you don't have a QMK-based keyboard, you can easily add a `hyper` key to
+MacOS using Karabiner Elements. There are many tutorials out there; [here's
+one](https://brettterpstra.com/2017/06/15/a-hyper-key-with-karabiner-elements-full-instructions/#:~:text=Karabiner%20Elements%20should%20immediately%20detect,%E2%8C%98%E2%87%A7%E2%8C%A5%E2%8C%83X%20)
+that might work.
+
 ### Controlling the popup delay
 
 The popup delay defaults to `250ms`. You can control this with an option:
