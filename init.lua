@@ -58,7 +58,7 @@ end
 
 function HyperKey:_bind(key, bindKey, binding)
   table.insert(self.bindings, {
-    key = key,
+    key = string.upper(key),
     bindKey = bindKey,
     binding = binding
   })
