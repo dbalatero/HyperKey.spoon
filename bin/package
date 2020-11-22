@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+echo "Cleaning last build..."
+rm -fr HyperKey.spoon.zip
+
+echo "Zipping..."
+echo
+zip HyperKey.spoon.zip *.md *.json *.lua lib
