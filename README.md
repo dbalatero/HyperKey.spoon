@@ -1,4 +1,4 @@
-# HyperKey.spoon
+# 🌌 ⌨️ HyperKey.spoon
 
 If you have a lot of global key binds to `super`, `hyper`, or other modifier keys, this library lets you easily setup your key binds to switch/launch applications or call a function.
 
