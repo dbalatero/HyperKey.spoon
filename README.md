@@ -8,6 +8,17 @@ As well, if you hold down the modifier key(s), a popup help menu will appear sho
 
 This was inspired by the Spacemacs [spacebar leader menu](https://www.spacemacs.org/doc/QUICK_START.html#the-leader-keys), and [vim-leader-guide](https://github.com/hecal3/vim-leader-guide).
 
+## Installation
+
+The easiest thing to do is paste this in:
+
+```
+mkdir -p ~/.hammerspoon/Spoons
+git clone https://github.com/dbalatero/HyperKey.spoon.git ~/.hammerspoon/Spoons/HyperKey.spoon
+```
+
+then move onto the next section for configuration.
+
 ## Usage
 
 ```lua
