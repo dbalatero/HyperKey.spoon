@@ -1,8 +1,11 @@
 # 🌌 ⌨️ HyperKey.spoon
 
-If you have a lot of global key binds to `super`, `hyper`, or other modifier keys, this library lets you easily setup your key binds to switch/launch applications or call a function.
+If you have a lot of global key binds to `super`, `hyper`, or other modifier
+keys, this [Hammerspoon](https://www.hammerspoon.org/docs/index.html) library lets you easily setup your key binds to switch/launch
+applications or call a function.
 
-As well, if you hold down the modifier key(s), a popup help menu will appear showing you all your key binds:
+As well, if you hold down the modifier key(s), a popup help menu will appear
+showing you all your key binds:
 
 <img src="https://github.com/dbalatero/HyperKey.spoon/raw/master/images/screenshot.png" />
 
