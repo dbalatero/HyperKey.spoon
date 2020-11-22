@@ -1,5 +1,7 @@
 # HyperKey.spoon
 
+<img src="https://github.com/dbalatero/HyperKey.spoon/raw/master/images/screenshot.png" />
+
 ## Usage
 
 ```lua
