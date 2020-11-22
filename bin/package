@@ -5,4 +5,4 @@ rm -fr HyperKey.spoon.zip
 
 echo "Zipping..."
 echo
-zip HyperKey.spoon.zip *.md *.json *.lua lib
+zip ~/code/Spoons/Spoons/HyperKey.spoon.zip "$(realpath .)"
