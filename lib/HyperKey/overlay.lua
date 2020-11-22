@@ -113,6 +113,28 @@ function Overlay:_buildCanvas()
 
     currentLayerIndex = currentLayerIndex + 1
 
+    local image = entry.binding:getImage()
+
+    if image then
+      local imageSize = 14
+      image = image:setSize({ w = imageSize, h = imageSize })
+
+      local offset = keySize - (imageSize / 2)
+
+      canvas:insertElement(
+        {
+          type = 'image',
+          image = image,
+          frame = {
+            x = startX + offset,
+            y = startY + offset,
+            w = imageSize,
+            h = imageSize,
+          },
+        }
+      )
+    end
+
     canvas:insertElement(
       {
         type = 'text',
