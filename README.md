@@ -75,3 +75,71 @@ hyperKey:bind('s'):toApplication('/Applications/Safari.app')
 superKey = HyperKey:new({'cmd', 'alt', 'ctrl'})
 superKey:bind('L'):toFunction('Lock screen', hs.caffeinate.startScreensaver)
 ```
+
+## Methods
+
+### `HyperKey:new(modifiers, options)`
+
+Creates a new set of hotkeys triggered by `modifiers`. Holding the `modifiers`
+down will show a popup overlay of all registered keybinds.
+
+* `modifiers` - a Lua table of modifiers, e.g. `{'cmd','shift','alt','ctrl'}`
+* `options` - a Lua table of options, with the following keys:
+  * `overlayTimeoutMs: number` - number of milliseconds to wait before fading in the hotkey overlay. Defaults to `250`ms.
+
+Usage:
+
+```lua
+hyperKey = HyperKey:new(
+  {'cmd', 'shift', 'alt', 'ctrl'},
+  { overlayTimeoutMs = 1000 }
+)
+
+-- then bind some keys to it
+```
+
+### `HyperKey:bind(displayedKey, [bindKey]):toFunction(name, fn)`
+
+Binds `modifiers` + `bindKey` to a given `fn` to be called.
+
+Returns `self`, so you can chain keybinds.
+
+* `displayedKey` - the key character to display on the popup.
+* `bindKey` - the Hammerspoon key to bind. Defaults to `displayedKey`.
+  * This is the same set of key values that `hs.hotkey.bind` takes.
+* `name` - the description of this key bind to display on the popup.
+* `fn` - the function to call when the hotkey is pressed.
+
+Usage:
+
+```lua
+local function doSomethingCool()
+  -- fill me in
+end
+
+hyperKey = HyperKey:new({'cmd', 'shift'})
+
+hyperKey
+  :bind('c'):toFunction("Do a cool thing", doSomethingCool)
+```
+
+### `HyperKey:bind(displayedKey, [bindKey]):toApplication(applicationPath)`
+
+Binds `modifiers` + `bindKey` to quick-switch to a given application. If the application is not running, it will launch it.
+
+Returns `self`, so you can chain keybinds.
+
+* `displayedKey` - the key character to display on the popup.
+* `bindKey` - the Hammerspoon key to bind. Defaults to `displayedKey`.
+  * This is the same set of key values that `hs.hotkey.bind` takes.
+* `applicationPath` - the application to launch/switch, e.g. `/Applications/Safari.app`
+
+Usage:
+
+```lua
+hyperKey = HyperKey:new({'cmd', 'shift'})
+
+hyperKey
+  :bind('m'):toApplication('/Applications/Mail.app')
+  :bind('s'):toApplication('/Applications/Safari.app')
+```
