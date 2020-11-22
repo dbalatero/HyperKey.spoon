@@ -1,4 +1,4 @@
-local newclass = require('HyperSwitcher.utils.yaci')
+local newclass = require('HyperKey.utils.yaci')
 
 local KeyBinding = newclass("KeyBinding")
 

@@ -9,23 +9,23 @@ package.path = rootDir .. "lib/?.lua;" .. package.path
 
 -----------------------------------------
 
-local newclass = require('HyperSwitcher.utils.yaci')
-local onModifierHold = require('HyperSwitcher.utils.on_modifier_hold')
-local bindings = require('HyperSwitcher.bindings')
-local Overlay = require('HyperSwitcher.overlay')
+local newclass = require('HyperKey.utils.yaci')
+local onModifierHold = require('HyperKey.utils.on_modifier_hold')
+local bindings = require('HyperKey.bindings')
+local Overlay = require('HyperKey.overlay')
 
 ----------------------------------------------------------------
 
-local HyperSwitcher = newclass("HyperSwitcher")
+local HyperKey = newclass("HyperKey")
 
-HyperSwitcher.author = "David Balatero <d@balatero.com>"
-HyperSwitcher.homepage = "https://github.com/dbalatero/HyperSwitcher.spoon"
-HyperSwitcher.license = "MIT"
-HyperSwitcher.name = "HyperSwitcher"
-HyperSwitcher.version = "1.0.0"
-HyperSwitcher.spoonPath = rootDir
+HyperKey.author = "David Balatero <d@balatero.com>"
+HyperKey.homepage = "https://github.com/dbalatero/HyperKey.spoon"
+HyperKey.license = "MIT"
+HyperKey.name = "HyperKey"
+HyperKey.version = "1.0.0"
+HyperKey.spoonPath = rootDir
 
-function HyperSwitcher:init(hyperMods, options)
+function HyperKey:init(hyperMods, options)
   options = options or {}
 
   self.overlayTimeoutMs = options.overlayTimeoutMs or 250
@@ -35,7 +35,7 @@ function HyperSwitcher:init(hyperMods, options)
   self.holdTap = self:_createOverlayTap()
 end
 
-function HyperSwitcher:bind(displayedKey, bindKey)
+function HyperKey:bind(displayedKey, bindKey)
   bindKey = bindKey or displayedKey
 
   return {
@@ -56,7 +56,7 @@ function HyperSwitcher:bind(displayedKey, bindKey)
   }
 end
 
-function HyperSwitcher:_bind(key, bindKey, binding)
+function HyperKey:_bind(key, bindKey, binding)
   table.insert(self.bindings, {
     key = key,
     bindKey = bindKey,
@@ -72,7 +72,7 @@ function HyperSwitcher:_bind(key, bindKey, binding)
   return self
 end
 
-function HyperSwitcher:_createOverlayTap()
+function HyperKey:_createOverlayTap()
   local onHold = function()
     self.overlay:show()
   end
@@ -84,4 +84,4 @@ function HyperSwitcher:_createOverlayTap()
   return onModifierHold(self.hyperMods, self.overlayTimeoutMs, onHold, onRelease)
 end
 
-return HyperSwitcher
+return HyperKey

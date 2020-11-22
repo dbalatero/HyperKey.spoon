@@ -1,4 +1,4 @@
-# HyperSwitcher.spoon
+# HyperKey.spoon
 
 ## Usage
 
@@ -6,8 +6,8 @@
 local hyper = {'cmd', 'alt', 'ctrl', 'shift'}
 
 -- Load and create a new switcher
-local HyperSwitcher = hs.loadSpoon("HyperSwitcher")
-hyperSwitcher = HyperSwitcher:new(hyper)
+local HyperKey = hs.loadSpoon("HyperKey")
+hyperSwitcher = HyperKey:new(hyper)
 
 -- Bind some applications to keys
 hyperSwitcher

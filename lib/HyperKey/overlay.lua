@@ -1,5 +1,5 @@
-local newclass = require('HyperSwitcher.utils.yaci')
-local rgba = require('HyperSwitcher.utils.rgba')
+local newclass = require('HyperKey.utils.yaci')
+local rgba = require('HyperKey.utils.rgba')
 
 local Overlay = newclass('Overlay')
 
