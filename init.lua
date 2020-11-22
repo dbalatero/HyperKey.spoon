@@ -18,6 +18,13 @@ local Overlay = require('HyperSwitcher.overlay')
 
 local HyperSwitcher = newclass("HyperSwitcher")
 
+HyperSwitcher.author = "David Balatero <d@balatero.com>"
+HyperSwitcher.homepage = "https://github.com/dbalatero/HyperSwitcher.spoon"
+HyperSwitcher.license = "MIT"
+HyperSwitcher.name = "HyperSwitcher"
+HyperSwitcher.version = "1.0.0"
+HyperSwitcher.spoonPath = rootDir
+
 function HyperSwitcher:init(hyperMods, options)
   options = options or {}
 
