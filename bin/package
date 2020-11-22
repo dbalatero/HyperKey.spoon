@@ -5,4 +5,5 @@ rm -fr HyperKey.spoon.zip
 
 echo "Zipping..."
 echo
-zip ~/code/Spoons/Spoons/HyperKey.spoon.zip "$(realpath .)"
+
+cd .. && zip ~/code/Spoons/Spoons/HyperKey.spoon.zip HyperKey.spoon
