@@ -1,0 +1,20 @@
+[
+  {
+    "name": "HyperKey",
+    "type": "Module",
+    "desc": "Bind modifier hot keys with a floating hotkey overlay",
+    "doc": "Bind modifier hot keys with a floating hotkey overlay",
+    "submodules": [],
+    "stripped_doc": "Download: [https://github.com/dbalatero/Spoons/raw/master/Spoons/HyperKey.spoon.zip](https://github.com/dbalatero/Spoons/raw/master/Spoons/HyperKey.spoon.zip)",
+    "Command": [],
+    "Constant": [],
+    "Constructor": [],
+    "Deprecated": [],
+    "Field": [],
+    "Function": [],
+    "Method": [
+    ],
+    "Variable": [],
+    "items": []
+  }
+]
