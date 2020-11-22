@@ -1,12 +1,9 @@
 #!/usr/bin/env bash
 
 echo "Cleaning last build..."
-rm -fr HyperKey.spoon.zip
+rm -fr ~/Desktop/HyperKey.spoon.zip
 
 echo "Zipping..."
 echo
 
-root_dir=$(realpath .)
-zip /tmp/HyperKey.spoon.zip *
-
-mv /tmp/HyperKey.spoon.zip $root_dir/HyperKey.spoon.zip
+zip ~/Desktop/HyperKey.spoon.zip *
