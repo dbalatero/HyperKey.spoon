@@ -7,10 +7,10 @@ local hyper = {'cmd', 'alt', 'ctrl', 'shift'}
 
 -- Load and create a new switcher
 local HyperKey = hs.loadSpoon("HyperKey")
-hyperSwitcher = HyperKey:new(hyper)
+hyperKey = HyperKey:new(hyper)
 
 -- Bind some applications to keys
-hyperSwitcher
+hyperKey
   :bind('c'):toApplication('/Applications/Google Chrome.app')
   :bind('s'):toApplication('/Applications/Spotify.app')
   :bind('t'):toApplication('/Applications/Alacritty.app')
@@ -21,7 +21,7 @@ local reloadHammerspoon = function()
   hs.reload()
 end
 
-hyperSwitcher
+hyperKey
   :bind('h'):toFunction("Reload Hammerspoon", reloadHammerspoon)
   :bind('l'):toFunction("Lock screen", hs.caffeinate.startScreensaver)
 ```
