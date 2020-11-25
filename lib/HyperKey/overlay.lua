@@ -11,15 +11,13 @@ function Overlay:init(bindings)
 end
 
 function Overlay:show()
-  if not self.canvas then
-    self.canvas = self:_buildCanvas()
-  end
-
+  self.canvas = self:_buildCanvas()
   self.canvas:show(fadeTime)
 end
 
 function Overlay:hide()
-  self.canvas:hide(fadeTime)
+  self.canvas:delete(fadeTime)
+  self.canvas = nil
 end
 
 function Overlay:_buildCanvas()
