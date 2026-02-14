@@ -56,6 +56,18 @@ function HyperKey:bind(displayedKey, bindKey)
   }
 end
 
+function HyperKey:documentExternalKey(key, name)
+  table.insert(self.bindings, {
+    key = string.upper(key),
+    bindKey = key,
+    binding = bindings.ExternalBinding:new(name)
+  })
+
+  self.overlay = Overlay:new(self.bindings)
+
+  return self
+end
+
 function HyperKey:_bind(key, bindKey, binding)
   table.insert(self.bindings, {
     key = string.upper(key),

@@ -146,3 +146,23 @@ hyperKey
   :bind('m'):toApplication('/Applications/Mail.app')
   :bind('s'):toApplication('/Applications/Safari.app')
 ```
+
+### `HyperKey:documentExternalKey(key, name)`
+
+Adds a key to the popup overlay without creating a Hammerspoon hotkey binding. This is useful for documenting keys that are bound outside of Hammerspoon (e.g. in Karabiner Elements, BetterTouchTool, or another tool) so they still show up in the help menu.
+
+Returns `self`, so you can chain keybinds.
+
+* `key` - the key character to display on the popup.
+* `name` - the description of this key bind to display on the popup.
+
+Usage:
+
+```lua
+hyperKey = HyperKey:new({'cmd', 'shift', 'alt', 'ctrl'})
+
+hyperKey
+  :bind('s'):toApplication('/Applications/Safari.app')
+  :documentExternalKey('m', 'Mute Zoom')
+  :documentExternalKey('v', 'Start/Stop Video')
+```

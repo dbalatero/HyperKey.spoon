@@ -44,7 +44,20 @@ end
 
 ------
 
+local ExternalBinding = KeyBinding:subclass('ExternalBinding')
+
+function ExternalBinding:init(name)
+  self.super:init(name)
+end
+
+function ExternalBinding:launch()
+  -- no-op: bound outside of Hammerspoon
+end
+
+------
+
 return {
   ApplicationBinding = ApplicationBinding,
+  ExternalBinding = ExternalBinding,
   FunctionBinding = FunctionBinding,
 }
