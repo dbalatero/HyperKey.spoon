@@ -16,6 +16,8 @@ function Overlay:show()
 end
 
 function Overlay:hide()
+  if not self.canvas then return end
+
   self.canvas:delete(fadeTime)
   self.canvas = nil
 end
