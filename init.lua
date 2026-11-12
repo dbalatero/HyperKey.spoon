@@ -78,6 +78,7 @@ function HyperKey:_bind(key, bindKey, binding)
   self.overlay = Overlay:new(self.bindings)
 
   hs.hotkey.bind(self.hyperMods, bindKey, function()
+    self.overlay:hide()
     binding:launch()
   end)
 
